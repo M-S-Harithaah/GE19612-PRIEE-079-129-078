@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deaf Education Platform</title>
+<link rel="stylesheet" href="first.css">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('assessment-form');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const feedbackDiv = document.getElementById('assessment-feedback');
+            feedbackDiv.innerHTML = ''; // Clear previous feedback
+
+            // Get selected answers
+            const answer1 = document.querySelector('input[name="question1"]:checked');
+            const answer2 = document.querySelector('input[name="question2"]:checked');
+            const answer3 = document.querySelector('input[name="question3"]:checked');
+            const answer4 = document.querySelector('input[name="question4"]:checked');
+            const answer5 = document.querySelector('input[name="question5"]:checked');
+            // Check answers and provide feedback
+            if (answer1 && answer1.value === 'a') {
+                feedbackDiv.innerHTML += '<p>Question 1: Correct!</p>';
+            } else {
+                feedbackDiv.innerHTML += '<p>Question 1: Incorrect.</p>';
+            }
+
+            if (answer2 && answer2.value === 'a') {
+                feedbackDiv.innerHTML += '<p>Question 2: Correct!</p>';
+            } else {
+                feedbackDiv.innerHTML += '<p>Question 2: Incorrect.</p>';
+            }
+
+            if (answer3 && answer3.value === 'a') {
+                feedbackDiv.innerHTML += '<p>Question 3: Correct!</p>';
+            } else {
+                feedbackDiv.innerHTML += '<p>Question 3: Incorrect.</p>';
+            }
+            if (answer4 && answer4.value === 'a') {
+                feedbackDiv.innerHTML += '<p>Question 4: Correct!</p>';
+            } else {
+                feedbackDiv.innerHTML += '<p>Question 4: Incorrect.</p>';
+            }
+            if (answer5&& answer5.value === 'a') {
+                feedbackDiv.innerHTML += '<p>Question 5: Correct!</p>';
+            } else {
+                feedbackDiv.innerHTML += '<p>Question 5: Incorrect.</p>';
+            }
+            // Scroll to the feedback section
+            feedbackDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+
+</head>
+<body>
+<header>
+    <h1>Welcome to the Deaf Education Platform</h1>
+    <nav>
+        <ul>
+            <li><a href="first.html">Home</a></li>
+            <li><a href="intro.html">Lessons</a></li>
+            <li><a href="assessment.html">Assessment</a></li>
+            
+            
+            
+            
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="lessons">
+        <h2>Lessons</h2>
+        <section id="intro-sign-language" class="lesson">
+            <!-- Your existing content for the "Introduction to Sign Language" lesson -->
+        </section>
+
+        <section id="assessment" class="assessment-module">
+            <h3>Assessment</h3>
+            <p>Test your knowledge of sign language with the following questions:</p>
+            <form id="assessment-form">
+                <ol>
+                    <li>
+                        <p>What is fingerspelling?</p>
+                        <label for="question1a"><input type="radio" id="question1a" name="question1" value="a" required> Spelling with fingers</label><br>
+                        <label for="question1b"><input type="radio" id="question1b" name="question1" value="b"> Counting numbers</label><br>
+                        <label for="question1c"><input type="radio" id="question1c" name="question1" value="c"> Basic greetings</label><br>
+                        <label for="question1d"><input type="radio" id="question1d" name="question1" value="d"> Non-verbal communication</label><br>
+                    </li>
+                    <li>
+                        <p>What is the sign for "thank you"?</p>
+                        <img src="thanku.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2a"><input type="radio" id="question2a" name="question2" value="a" required> A</label>
+                        <img src="please.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2b" name="question2" value="b"> B</label><br>
+                        <img src="hello.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2c" name="question2" value="b"> C</label>
+                        <img src="goodbye.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2d" name="question2" value="b"> D</label><br>
+                        
+                    </li>
+                    <li>
+                        <p>What are non-manual markers?</p>
+                        <label for="question3a"><input type="radio" id="question3a" name="question3" value="a" required> Facial expressions, body language, and other non-hand movements</label><br>
+                        <label for="question3b"><input type="radio" id="question3b" name="question3" value="b"> Handshapes and movements in sign language</label><br>
+                        <label for="question3c"><input type="radio" id="question3c" name="question3" value="c"> Numbers and counting systems</label><br>
+                        <label for="question3d"><input type="radio" id="question3d" name="question3" value="d"> Common phrases and greetings</label><br>
+                    </li>
+                    <li>
+                        <p>What is the sign for "yes"?</p>
+                        <img src="no.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2a"><input type="radio" id="question2a" name="question2" value="a" required> A</label>
+                        <img src="thanku.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2b" name="question2" value="b"> B</label><br>
+                        <img src="yes.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2c" name="question2" value="b"> C</label>
+                        <img src="goodbye.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2d" name="question2" value="b"> D</label><br>
+                        
+                    </li>
+                    <li>
+                        <p>What is the sign for "no"?</p>
+                        <img src="no.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2a"><input type="radio" id="question2a" name="question2" value="a" required> A</label>
+                        <img src="thanku.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2b" name="question2" value="b"> B</label><br>
+                        <img src="yes.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2c" name="question2" value="b"> C</label>
+                        <img src="goodbye.jpg" alt="Introduction to Sign Language for Alphabets">
+                        <label for="question2b"><input type="radio" id="question2d" name="question2" value="b"> D</label><br>
+                        
+                    </li>
+                   
+                </ol>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="assessment-feedback"></div>
+        </section>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Deaf Education Platform. All rights reserved.</p>
+</footer>
+</body>
+</html>
